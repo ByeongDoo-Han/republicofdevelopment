@@ -15,6 +15,4 @@ public class CommentResponseDto {
         this.id = id;
         this.content = content;
     }
-
-
 }

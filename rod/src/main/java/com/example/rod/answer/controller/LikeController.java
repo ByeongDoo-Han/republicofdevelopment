@@ -1,7 +1,6 @@
-/*
 package com.example.rod.answer.controller;
 
-import com.example.rod.answer.service.LikeService;
+import com.example.rod.answer.service.likeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,12 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/likes")
 public class LikeController {
 
-    private final LikeService likeservice;
+    private final likeService likeService;
 
     @PostMapping("/answer/{answerId}")
     public void likeAnswer(@PathVariable Long answerId){
-       likeservice.likeAnswer(answerId);
+       likeService.likeAnswer(answerId);
     }
-
 }
-*/

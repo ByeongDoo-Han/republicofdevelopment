@@ -4,13 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class AnswerRequestDto {
+@AllArgsConstructor
+public class AnswerResultDto<T> {
 
-    private String content;
+    private int currentPage;
+
+    private Long answerCount;
+
+    private T data;
 
 
 }

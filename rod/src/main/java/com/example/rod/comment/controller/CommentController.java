@@ -1,13 +1,11 @@
-/*
 package com.example.rod.comment.controller;
 
 import com.example.rod.comment.dto.CommentRequestDto;
 import com.example.rod.comment.dto.CommentResponseDto;
+import com.example.rod.comment.dto.CommentResultDto;
 import com.example.rod.comment.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -37,10 +35,13 @@ public class CommentController {
     }
 
     // 내 댓글 리스트조회
+//    @GetMapping("/answers")
+//    public List<CommentResponseDto> getListComment(@RequestParam int offset , @RequestParam int limit) {
+//        return commentService.getListComment(offset, limit);
+//    }
     @GetMapping("/answers")
-    public List<CommentResponseDto> getListComment() {
-        return commentService.getListComment();
+    public CommentResultDto getListComment(@RequestParam int offset , @RequestParam int limit) {
+        return commentService.getListComment(offset, limit);
     }
 
 }
-*/
